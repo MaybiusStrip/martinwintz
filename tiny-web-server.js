@@ -1,3 +1,4 @@
+// Adapted from https://gist.github.com/kentbrew/764238
 ["fs", "http", "mime", "path", "url" ].forEach(function (module) {
   global[module] = require(module);
 });
