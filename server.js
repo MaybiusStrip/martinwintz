@@ -5,7 +5,7 @@
 
 var config = {
   'port': 8000,
-  'dir': 'site'
+  'dir': '_site'
 };
 
 var server = http.createServer(function (req, res) {

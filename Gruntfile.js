@@ -7,14 +7,37 @@ module.exports = function (grunt) {
     nodemon: {
       dev: {
         script: 'server.js'
+      },
+    options: {
+      watch: 'stylesheet'
+    }
+    },
+
+    clean: {
+      all: {
+        src: '_site'
+      },
+      html: {
+        src: '_site/index.html'
+      },
+      css: {
+        src: '_site/**/*.css'
+      },
+      js: {
+        src: '_site/**/*.js'
       }
     },
 
     copy: {
       all: {
         files: [
-          { src: 'site/index.html', dest: '_site/' },
-          { src: 'site/images/', dest: '_site/images/' },
+          { src: 'site/index.html', dest: '_site/index.html' },
+          { expand: true, cwd: 'site/images/', src: '**/*', dest: '_site/images/' },
+        ]
+      },
+      html: {
+        files: [
+          { src: 'site/index.html', dest: '_site/index.html' }
         ]
       }
     },
@@ -29,17 +52,31 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      all: {
-        files: ['site/**/*.*'],
-        tasks: ['dev']
+      html: {
+        files: ['site/**/*.html'],
+        tasks: ['clean:html', 'copy:html']
+      },
+      less: {
+        files: ['site/**/*.less'],
+        tasks: ['clean:css', 'less:all']
       }
+    },
+
+    concurrent: {
+      build: ['copy:all', 'less:all'],
+      dev: {
+        tasks: ['watch:html', 'watch:less', 'nodemon:dev'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
     }
+
 
   });
 
 
-  grunt.registerTask('dev', ['copy:all', 'less:all', 'nodemon:dev']);
-  grunt.registerTask('default', ['dev', 'watch:all']);
+  grunt.registerTask('default', ['clean:all', 'concurrent:build', 'concurrent:dev']);
 
 
 };
