@@ -1,0 +1,25 @@
+{
+  "name": "martin",
+  "version": "0.0.0",
+  "description": "Martin Wintz's personal website.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaybiusStrip/martin-personal"
+  },
+  "author": "Martin Wintz",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MaybiusStrip/martin-personal/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-nodemon": "~0.2.0"
+  },
+  "dependencies": {
+    "mime": "~1.2.11"
+  }
+}
