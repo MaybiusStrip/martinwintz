@@ -1,14 +1,18 @@
 nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
   font-family: "brandon-grotesque",sans-serif;
   font-style: normal;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 18px;
   color: #999;
+  background-color: #333;
 
   ul {
     display: block;
-    margin: 20px auto 0;
+    margin: 0 auto;
     list-style: none;
     max-width: 600px;
     padding: 20px;
@@ -21,7 +25,7 @@ nav {
       .transition(0.5s);
 
       &:hover {
-        color: #222;
+        color: #eee;
       }
     }
   }
@@ -29,21 +33,32 @@ nav {
 
 
 section {
-  font-family: "ff-tisa-web-pro",serif;
+  /*font-family: "ff-tisa-web-pro",serif;*/
+  font-family: "calluna",serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
-  line-height: 120%;
+  font-size: 22px;
+  line-height: 33px;
   color: #444;
+
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  .inner {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
 } 
 
 #home {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-  margin: 100px auto 0;
-  padding: 0 20px;
-  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 200px 20px 200px;
 
   text-align: center;
 
@@ -51,6 +66,23 @@ section {
     display: block;
     width: 233px;
     margin: 0 auto 20px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+#code {
+  background-color: #35353A;
+  padding: 30px 20px 300px;
+  color: #fff;
+
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    padding: 45px 0;
   }
 }
 
