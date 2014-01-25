@@ -17,10 +17,29 @@ module.exports = function (grunt) {
           { src: 'site/images/', dest: '_site/images/' },
         ]
       }
+    },
+
+    less: {
+      options: {
+        cleancss: true
+      },
+      all: {
+        files: { '_site/stylesheets/main.css': 'site/stylesheets/main.less' }
+      }
+    },
+
+    watch: {
+      all: {
+        files: ['site/**/*.*'],
+        tasks: ['dev']
+      }
     }
 
   });
 
+
+  grunt.registerTask('dev', ['copy:all', 'less:all', 'nodemon:dev']);
+  grunt.registerTask('default', ['dev', 'watch:all']);
 
 
 };
