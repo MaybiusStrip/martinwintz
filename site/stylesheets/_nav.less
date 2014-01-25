@@ -1,0 +1,38 @@
+nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  z-index: 1010;
+  box-sizing: border-box;
+
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #999;
+
+
+  ul {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      width: 25%;
+
+      text-align: center;
+      cursor: pointer;
+      .transition(0.5s);
+
+      &:hover {
+        color: #eee;
+      }
+    }
+  }
+}
