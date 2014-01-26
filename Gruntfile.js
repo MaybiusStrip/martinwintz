@@ -59,13 +59,25 @@ module.exports = function (grunt) {
       less: {
         files: ['site/**/*.less'],
         tasks: ['clean:css', 'less:all']
+      },
+      js: {
+        files: ['site/**/*.js'],
+        tasks: ['clean:js', 'uglify:all']
+      }
+    },
+
+    uglify: {
+      all: {
+        files: {
+          '_site/js/main.js': ['site/js/jquery-ui.min.js', 'site/js/main.js']
+        }
       }
     },
 
     concurrent: {
-      build: ['copy:all', 'less:all'],
+      build: ['copy:all', 'less:all', 'uglify:all'],
       dev: {
-        tasks: ['watch:html', 'watch:less', 'nodemon:dev'],
+        tasks: ['watch:html', 'watch:less', 'watch:js', 'nodemon:dev'],
         options: {
           logConcurrentOutput: true
         }
