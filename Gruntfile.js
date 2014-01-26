@@ -89,7 +89,7 @@ module.exports = function (grunt) {
       options: {
         base: '_site',
         branch: 'master',
-        repo: 'git@github.com:MaybiusStrip/maybiusstrip.github.io.git'
+        repo: 'git@github.com:MaybiusStrip/MaybiusStrip.github.io.git'
       },
       src: '**/*'
     }
