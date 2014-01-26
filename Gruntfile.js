@@ -32,6 +32,7 @@ module.exports = function (grunt) {
       all: {
         files: [
           { src: 'site/index.html', dest: '_site/index.html' },
+          { src: 'site/CNAME', dest: '_site/CNAME' },
           { expand: true, cwd: 'site/images/', src: '**/*', dest: '_site/images/' },
         ]
       },
@@ -82,6 +83,15 @@ module.exports = function (grunt) {
           logConcurrentOutput: true
         }
       },
+    },
+
+    'gh-pages': {
+      options: {
+        base: '_site',
+        branch: 'master',
+        repo: 'git@github.com:MaybiusStrip/maybiusstrip.github.io.git'
+      },
+      src: '**/*'
     }
 
 
@@ -89,6 +99,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('default', ['clean:all', 'concurrent:build', 'concurrent:dev']);
+  grunt.registerTask('deploy', ['clean:all', 'concurrent:build', 'gh-pages']);
 
 
 };
