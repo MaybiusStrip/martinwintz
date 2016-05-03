@@ -15,7 +15,7 @@ var server = http.createServer(function (req, res) {
 
   if (!path.extname(filename)) { filename = filename + '/index.html'; }
 
-  path.exists(filename, function (gotPath) {
+  fs.exists(filename, function (gotPath) {
 
     if (!gotPath) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
