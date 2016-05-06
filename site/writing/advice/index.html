@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Martin Wintz - Advice For Junior Developers</title>
+  <script type="text/javascript" src="//use.typekit.net/nod1vng.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" href="/stylesheets/writing.css" media="all">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47460568-1', 'martinwintz.com');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <article>
+
+
+      <h1>Advice For Junior Developers</h1>
+      <section>
+
+        <p>One of the great things about progressing in my career as a software engineer is that I am now getting the opportunity to mentor younger developers. I’ve spent a lot of time and energy optimizing my own learning, and it brings me joy to share my insights with others. I've written down some of them here in the form of advice.</p>
+
+        <p>A lot of developers work really hard, but not all of them prioritize learning, which requires a certain amount of deliberate effort and constant meta-evaluation. Some people who want to progress may also feel stuck due to a lack of resources or mentorship. These developers come to work every day, make progress on their tickets, and go home. Years later, their throughput might have increased a bit, but their routine hasn't changed.</p>
+
+        <p>It’s easy to mistake getting used to doing something with getting better at it. It’s like exercise: If I go to the gym every day and lift the same weights and run the same distances at the same speed, I’ll just maintain the same level of fitness. For athletes, every moment in the weight room or on the track is designed to help them beat their previous personal records. Time spent maintaining the status quo is time wasted, so they continuously step out of their comfort zones and push their personal boundaries. In order to become a great developer, I want to approach my work with the same zeal that athletes approach exercise.</p>
+
+        <p>I firmly believe that in order to have a great career you can never stop learning and improving, for a couple reasons:
+
+        <ul>
+          <li>Becoming really good and successful at what you do is vital to your well-being and job satisfaction. I highly recommend the book <em><a  href="http://amzn.to/1T2lRls">So Good They Can't Ignore You</a>,</em> which lays out a convincing argument for this point.</li>
+          <li>Daily work will eventually turn to rote, no matter how interesting it is at first. Learning is the best way I know to keep your job fresh and exciting.</li>
+        </ul>
+
+        <p>Most of the advice listed here requires an investment of time and effort outside of work. I've found it very worthwhile in my own personal growth.</p>
+
+      </section>
+
+
+      <h2>Study the craft</h2>
+      <section>
+
+        <p>When I started my programming career I realized that my degree in computer science did not teach me to be a good software engineer. The most important skills in building software – working in a large team, dealing with constantly changing requirements, growing software indeterminately, working in large codebases, etc. – are not included in a standard CS curriculum. I had to go find that knowledge elsewhere.</p>
+
+        <p>I find it surprising that many programmers never read a single book on software engineering best practices. I can understand resistance to the idea of going home after writing code for 8 hours and picking up a programming book, but going through your career without consulting any sort of expert source material is no different than showing up to the final exam after having skipped the entire semester’s worth of class. Some developers believe that all you need to code well is be really clever – that all useful knowledge can be derived. It’s in the same vein of conceited logic that lead junior developers to implement everything from scratch instead of using third party libraries. From my personal experience, books are some of the most powerful tools for improving not just the quality of code you write, but how you work with others and behave in a professional setting.</p>
+
+        <p>There are decades worth of literature written by great software engineers. I’ve put together a reading list on this <a href="/book">living document</a> to get you started, although you should seek out resources on your own, particularly for the specific tools you are using. </p>
+
+        <p>There are also a lot of interesting technical blog posts on the internet.  The good posts usually bubble up to the surface on <a href="https://news.ycombinator.com/">Hacker News</a> or <a href="https://reddit.com/r/programming">r/Programming</a>. Someday I will make a list for those as well. However, I want to emphasize that reading blogs is not enough. I've found books to have much more profound, lasting effects on my programming.</p>
+
+      </section>
+
+
+      <h2>Become fluent in code</h2>
+      <section>
+
+        <p>New developers are scared of reading code. Bad developers stay scared of reading code forever. When you’re starting out – or even just encountering a foreign technology or language – reading code is grueling work. It’s one of those tasks that requires a conscious application of sustained effort, the kind that gives headaches and begets naps. When something is that difficult and yet so central to your work, you can be confident that it’s a worthwhile skill to focus on.</p>
+
+        <p>Bad developers give up really quickly when they try to find the root cause of a tricky bug. In the worst case, they stop as soon as they can’t reproduce it. I’ve had a hard time convincing some developers that it’s not always necessary to reproduce a bug in order to find it, you just need to follow the code path until you see the bug, which isn’t too daunting if you’re very comfortable reading code. This can be the difference between days or even weeks of back and forth between a
+        developer and the support team vs. an hour spent reading code.</p>
+
+        <p>One of the slowest, most unproductive aspects of development is onboarding to new code. You operate orders of magnitude more quickly in code you know like the back of hand than in unfamiliar code. Memorizing the map of a new codebase as early as possible has immense returns on your productivity and the quality of your implementations. When you’re unfamiliar with code that you’re modifying, you tend to cut a path through it rather than working with it, lowering the quality of the
+        code without furthering your understanding of it.</p>
+
+        <p>Bad developers love detailed code comments<label for="sn-commenting" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-commenting" class="margin-toggle"/><span class="sidenote">Commenting is not evil. I use Uncle Bob’s rule of thumb for comments: before you write a comment, ask yourself whether you could write the code in a way that makes the comment unnecessary, if not, write the comment. This has the added benefit of making every comment a red flag for bad code, and bad code is sometimes unavoidable. The unfortunate downside of this method is that some engineers either have a hard time admitting their failures or misunderstand the
+          directive to mean that “commenting is bad” and never leave comments. Comments and documentation are also not to be confused.</span>. Good developers have never read a piece of code and wished they were reading somebody else’s lies about it instead. </p>
+
+        <p>The only way to become fluent in code is to read a lot of code. You have to switch gears from avoiding reading code to going out of your way to read it. Get to the bottom of those bugs, even if they lead you to code in a third party library. When onboarding to new code, don’t use existing functions and objects without trying to understand how they work. If you rely on a framework or library very often, take a peek at the code and try to understand how it works – if you call yourself an expert in that library, people are going to expect you to anyways.</p>
+
+      </section>
+
+
+      <h2>Master refactoring</h2>
+      <section>
+
+        <p>One of the most notable changes in my style of coding as I’ve grown as a developer is going from a design-once/write-once paradigm to using really short write/refactor cycles. Instead of trying to come up with a finely grained architecture away from the keyboard, I start writing code a bit sooner than is comfortable, and then start refactoring almost immediately after that. </p>
+
+        <p>I didn’t pioneer this methodology. Kent Beck is a huge proponent of working this way, especially in conjunction with TDD. The steps are:</p>
+
+        <ol>
+          <li>Write a failing test that matches your requirements</li>
+          <li>Write the simplest possible solution to make the test pass</li>
+          <li>Refactor the code you have so far to eliminate any code smells (duplication, lack of abstraction)</li>
+        </ol>
+
+        <p>The key being that this cycle is very fast, a few minutes at most.</p>
+
+        <p>This really reframes refactoring from being a method of cleaning up messes to being a means of software design. The big issue with seeing refactoring as a kind of big clean up job is that you’ll never have time for it. Making it an integral part of your workflow ensures that refactoring becomes a habit. It’s really not very different than the best advice on how to keep an orderly living space.</p>
+
+        <p>The key to become really good at refactoring is being able to quickly spot code smells and match them to their corresponding refactoring recipes. Refactoring then becomes a mindless task of pattern matching. The best book on the subject, which possibly introduced this model, is Martin Fowler’s <a href="http://amzn.to/24zMVxB"><em>Refactoring</em></a>.  It’s geared towards Java, and have some patterns which don’t apply to your language while missing others, but it’s a must read.</p>
+
+      </section>
+
+
+      <h2>Edit code quickly</h2>
+      <section>
+
+        <p>Optimizing your code editing workflow is something that I feel gets unfairly downplayed.  Opponents usually argue that the time savings are minimal relative to the time savings of being a fast abstract problem solver because “coding is really done away from the keyboard.” To this point I have two counter-arguments:</p>
+
+        <ul>
+          <li>If the real work is done away from the keyboard, then time at the keyboard is wasted. All the more reason to optimize your time on the keyboard.</li>
+          <li>If you walk into any office at a given moment you’ll see that the majority of developers are in front of their computer typing code, not whiteboarding or in a meeting. It’s simply not true that the time spent actually editing code is a minority percentage of an engineer’s time. </li>
+        </ul>
+
+      <p>No painter has ever abandoned the basics of brushwork, mixing colors, and so forth because they thought their talent and vision would make up for it. As a developer, your tools are your text editor, your command line, your debugger, etc… and you should learn to master them.</p>
+
+      <p>The first step is to pick a good tool. Here are some features I consider must haves:</p>
+      <ul class="checkmark">
+        <li>Syntax highlighting</li>
+        <li>Instant-feedback linting</li>
+        <li>Open files using fuzzy matching or similar</li>
+        <li>Convenient shortcuts for splitting panes and navigating between panes and tabs</li>
+        <li>Auto-completion and snippets</li>
+        <li>Fast full-codebase search</li>
+      </ul>
+
+      <p>Thankfully, this shouldn’t be too difficult to find. Any IDE or reputable text editor (vim, emacs, sublime, etc…) should support these. Although the text editors may not support them out of the box.</p>
+
+      <p>The second step is to master your tool. You should have every important shortcut memorized and know all its functionality. So many developers skip this step and it baffles me. I can’t count the number of times I’ve paired with someone who’s been using a text editor for years and I introduce them to some of its most basic time-saving functionality. Learning how to use a tool takes no effort, just initiative. You’re not too busy coding to waste your time with these kinds of
+      trivialities, you’re just being lazy. Skip netflix for one night to read the manual or google some blog posts. (the same goes for anything you might use everyday, like your source control tool or even just the shell).</p>
+
+      <p>I’m also a huge proponents of VIM-style text entry. Even if you don’t use vim, every text editor meant for editing code that I know of has VIM-style shortcuts. The motion commands “select-around”, “select-inside”, “move-to-character”, etc… are by far the fastest and most natural way to interact with code. I find these to be incredibly valuable when refactoring.</p>
+
+      <p>I’m a big fan of code snippets. Being able to abstract away all your boilerplate inside of shortcuts is a huge time-saver.</p>
+
+      <p>Last but not least, get a computer with an excellent CPU and a solid-state-drive. The difference it can make in shortening the compiling/unit-test/linting feedback cycle might surprise you.</p>
+
+      <div class="specialnote-wrapper">
+        <div class="specialnote">
+          <h2>My Setup</h2>
+          <p>For the past few years, I was writing code mostly in Javascript. I found that a text-editor with a a few plugins for linting, auto-completion, snippets, etc… was all I needed, and that an IDE provided marginal benefits at the cost of performance. I used a VIM set up inside of tmux. The fact that I could use it inside the shell alongside tmux made it lightning fast to switch between vim and the command line, which I frequently have to do to interact with git, run unit tests,
+          move/delete files, etc… The other benefit of this set up was that I was able to use it remotely. Instead of working directly on my laptop, for example, I sshed into my desktop and did all my development from there (forwarding all the necessary ports). My desktop was much more powerful, which made a huge difference when running the unit-tests or “compiling” our application (something that happens hundreds of times a day!). If you can’t use a shell-only setup, you have to master your
+          window manager.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <h2>Uphold yourself to high standards</h2>
+    <section>
+
+      <p>It’s a common programming trope that bug-free code is impossible to write and software is always a mess. Even if this might be true, programmers joking about it peeves me. I think they contribute to the entire field’s reputation as unprofessional and careless -- not real engineering. </p>
+
+      <p>Overeager entrepreneurs and managers have twisted the term hacking from a clever feat of resourcefulness to an excuse for writing terrible code very quickly in the name of fervor and passion. Again, cementing the perception of developers as reckless.</p>
+
+      <p>Be better than that. Be professional. Strive to write bug-free code. Feel responsible for the bugs you write, not just the ones that make it to production, but the ones that come up in code review or caught by testers. Don’t be lazy. Experiment in the privacy of your the code you have locally, but don’t push it out for an audience greater than yourself until you’re confident that it’s of the highest quality. You will make mistakes, but if you can’t tell the difference between your honest mistakes and your negligence, you’ll never be able to learn from them. </p>
+
+    </section>
+
+
+    <h2>Your success is your team’s success</h2>
+    <section>
+
+      <p>You will seldom work alone in this field. It doesn’t matter how great of an engineer you are if you can’t work as part of a team.</p>
+
+      <p>Working well as a part of a team entails striking a fine balance between contributing your thoughts and your work while empowering others to do the same. You can fail by going too far on either side of the spectrum. Some suffer from blind faith in their own ideas and ostracize their teammates. Others can’t fathom their contributions might be valuable and feel like impostors. Unfortunately, these two attitudes fuel each other and are rampant in the workplace. It’s your responsibility to not only address these issues with yourself, but to help the rest of your team overcome their own shortcomings.</p>
+
+      <p>If you  fall in the former category, you can practice a handful of techniques to help mitigate your own dominance and encourage your quieter teammates to contribute:</p>
+
+      <ul>
+        <li>Resist the urge to fill every silence with your own voice. People who are naturally quiet sometimes need a few seconds pause to muster the courage to speak.</li>
+        <li>Avoid the use of “no” and “but” when responding to others. </li>
+        <li>Don’t be mean. Don’t make people feel shame and embarrassment for their mistakes, even if those mistakes cost you personally.</li>
+        <li>Don’t take credit for other people’s ideas, even if you came up with the same idea independently.</li>
+        <li>Don’t spend too much time assessing others and dwelling on their competence. Spend more time gather feedback and improving yourself.</li>
+        <li>Acknowledge that people who are wrong are never aware of it, and therefore you might be wrong even if this might be unfathomable at the moment.</li>
+      </ul>
+
+      <p>I have less advice for those who struggle with with being shy or quiet in the workplace. In my experience, this type of personality is less destructive to a team environment than the former. You can still be a team contributor by being active through channels you might be more comfortable with, such as chat, code review, etc… However, it’s still not ideal. I’m a big believer in synchronous face-to-face work such as whiteboarding or pairing being much more effective than online communication. If you’re too shy to speak up during those activities, you’re robbing the team of your insights. I don’t have much better advice than to urge you to seek out solutions to this problem and make a point to work on it.</p>
+
+      <p>Generally, anyone can benefit by putting the team before themselves. Always seek to help others. Listen carefully for roadblocks during stand up and be the one who helps overcome them. Volunteer for annoying tasks. Be a mentor -- even if you’re not a senior engineer you can probably find someone who could learn from you.</p>
+
+      <p>On a broader scale, you should marry your success to the success of the product you’re currently working on. If you feel that you’re working to make someone else’s dreams come true, get over it or start your own company. Everybody except those at the top get exploited to a certain extent, save your resentment for the ballot box rather than channeling it towards damaging your career. The fastest way to grow is to grow at work. You can learn some things from side projects, but it won’t compare to what you can learn by succeeding as part of a business. You have to be passionate about your job in order to become great.</p>
+
+    </section>
+
+
+    <h2>Wrapping up</h2>
+    <section>
+      <p>Becoming a great engineer requires a lot of work beyond just doing your job. I hope I’ve shown you a few worthwhile ways in which to invest that extra effort. Please let me know if you disagreed with any of these points or if you’re interested in hearing more about any of them. Some of these sections could probably be expanded into entire pieces.</p>
+    </section>
+
+
+  </article>
+
+</body>
+</html>

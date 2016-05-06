@@ -32,13 +32,15 @@ module.exports = function (grunt) {
       all: {
         files: [
           { src: 'site/index.html', dest: '_site/index.html' },
+          { expand: true, cwd: 'site/writing/', src: '**/*', dest: '_site/writing/' },
           { src: 'site/CNAME', dest: '_site/CNAME' },
           { expand: true, cwd: 'site/images/', src: '**/*', dest: '_site/images/' },
         ]
       },
       html: {
         files: [
-          { src: 'site/index.html', dest: '_site/index.html' }
+          { src: 'site/index.html', dest: '_site/index.html' },
+          { expand: true, cwd: 'site/writing/', src: '**/*', dest: '_site/writing/' },
         ]
       }
     },
@@ -47,8 +49,11 @@ module.exports = function (grunt) {
       options: {
         cleancss: true
       },
-      all: {
-        files: { '_site/stylesheets/main.css': 'site/stylesheets/main.less' }
+      home: {
+        files: { '_site/stylesheets/home.css': 'site/stylesheets/home.less' }
+      },
+      writing: {
+        files: { '_site/stylesheets/writing.css': 'site/stylesheets/writing.less' }
       }
     },
 
@@ -59,7 +64,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: ['site/**/*.less'],
-        tasks: ['clean:css', 'less:all']
+        tasks: ['clean:css', 'less:home', 'less:writing']
       },
       js: {
         files: ['site/**/*.js'],
@@ -76,7 +81,7 @@ module.exports = function (grunt) {
     },
 
     concurrent: {
-      build: ['copy:all', 'less:all', 'uglify:all'],
+      build: ['copy:all', 'less:home', 'less:writing', 'uglify:all'],
       dev: {
         tasks: ['watch:html', 'watch:less', 'watch:js', 'nodemon:dev'],
         options: {
