@@ -28,6 +28,6 @@
     "grunt-gh-pages": "~0.9.0"
   },
   "dependencies": {
-    "mime": "~1.2.11"
+    "mime": "~2.4.4"
   }
 }
